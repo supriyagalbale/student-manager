@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+    {% load static %}
+    <img src="{% static 'images/stud.png' %}" align='centre' height="200" width="400" />
+
+
+
+<br>
+<a href="{% url 'students' %}">Students</a>
+<br>
+<a href="{% url 'batches' %}">Batches</a>
+<br>
+<a href="{% url 'courses' %}">Courses</a>
+<br>
+<a href=" ">Login</a>
+<br>
+<a href="{% url 'payments' %}">Payment</a>
+<br>
+
+{% endblock %}

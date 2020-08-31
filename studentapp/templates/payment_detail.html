@@ -1,0 +1,17 @@
+
+{% block content %}
+    <h1> Receipt Number :<em>{{ payment }}</em></h1>
+    <p> <strong> Admission Number : </strong> {{payment.admno}} </p>
+    <p> <strong> Amount : </strong> {{payment.amount}} </p>
+    <p> <strong> Paydate : </strong> {{payment.paydate}} </p>
+    <p> <strong> Remarks : </strong> {{batch.remarks}} </p>
+
+
+<br>
+<a href="{% url 'update_payment_details' payment.rpctno %}">Update Details</a>
+<br>
+<a href="{% url 'delete_payment_details' payment.rpctno %}">Delete Payment</a>
+<br>
+<a href="\">Back</a>
+
+{% endblock %}

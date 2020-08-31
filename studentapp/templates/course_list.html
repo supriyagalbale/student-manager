@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<u1>
+    {% for course in courses %}
+    <li>
+        <a href={% url 'course_detail' course.ccode %}> {{course.ccode}}<a/>
+        <br>
+    </li>
+    {% endfor %}
+<br>
+<a href="{% url 'add_course' %}">Add Courses</a>
+<br>
+    <a href="/">Back</a>
+
+
+</u1>
+{% endblock %}

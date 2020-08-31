@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1> Admission number :<em>{{ student }}</em></h1>
+    <p> <strong> Name : </strong> {{student.fullname}} </p>
+    <p> <strong> Father's name : </strong> {{student.fathername}} </p>
+    <p> <strong> Batch Code : </strong> {{student.batchcode}} </p>
+    <p> <strong> Roll number : </strong> {{student.rollno}} </p>
+    <p> <strong> Email : </strong> {{student.email}} </p>
+    <p> <strong> Phone : </strong> {{student.phone}} </p>
+
+<br>
+<a href="{% url 'update_student_details' student.admno %}">Update Details</a>
+<br>
+<a href="{% url 'delete_student_details' student.admno %}">Delete Details</a>
+<br>
+<a href="\">Back</a>
+
+{% endblock %}

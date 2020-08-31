@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <p>
+        Arr you sure to delete product {{batch}}?
+    </p>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="submit" action "" value="Yes, delete" />
+    </form>
+
+{% endblock%}

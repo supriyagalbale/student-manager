@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1> Batch Code :<em>{{ batch }}</em></h1>
+    <p> <strong> Course Code : </strong> {{batch.ccode}} </p>
+    <p> <strong> Start Date : </strong> {{batch.stdate}} </p>
+    <p> <strong> End Date : </strong> {{batch.enddate}} </p>
+    <p> <strong> Timings : </strong> {{batch.timings}} </p>
+
+
+<br>
+<a href="{% url 'update_batch_details' batch.batchcode %}">Update Details</a>
+<br>
+<a href="{% url 'delete_batch_details' batch.batchcode %}">Delete Batch</a>
+<br>
+<a href="\">Back</a>
+
+{% endblock %}

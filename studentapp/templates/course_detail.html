@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1> Course Code :<em>{{ course }}</em></h1>
+    <p> <strong> Course Code : </strong> {{course.ccode}} </p>
+    <p> <strong> Course Name : </strong> {{course.cname}} </p>
+    <p> <strong> Course Fee : </strong> {{course.coursefee}} </p>
+    <p> <strong> Duration : </strong> {{course.duration}} </p>
+    <p> <strong> Prerequisites : </strong> {{course.prereq}} </p>
+
+
+<br>
+<a href="{% url 'update_course_details' course.ccode %}">Update Details</a>
+<br>
+<a href="{% url 'delete_course_details' course.ccode %}">Delete Course</a>
+<br>
+<a href="\">Back</a>
+
+{% endblock %}
